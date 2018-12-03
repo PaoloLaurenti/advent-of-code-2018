@@ -8,5 +8,10 @@ defmodule FrequencyCalculatorTest do
       input = ["+42"]
       assert FrequencyCalculator.calculate(input) == 42
     end
+
+    test "returns the value as negative if input sign is -" do
+      input = ["-42"]
+      assert FrequencyCalculator.calculate(input) == -42
+    end
   end
 end
