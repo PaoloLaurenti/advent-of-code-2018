@@ -1,12 +1,4 @@
 defmodule Day1.FrequencyCalculator do
-  def calculate(["+" <> value]) do
-    asInteger(value)
-  end
-
-  def calculate(["-" <> value]) do
-    -asInteger(value)
-  end
-
   def calculate(values) do
     values
     |> Enum.map(&toNumber/1)

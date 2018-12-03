@@ -16,7 +16,7 @@ defmodule FrequencyCalculatorTest do
   end
 
   describe "input with two elements" do
-    test "returns the algebric sums depending of input element signs" do
+    test "returns the algebric sums depending of input elements sign" do
       input = ["+42", "-7"]
       assert FrequencyCalculator.calculate(input) == 35
     end
