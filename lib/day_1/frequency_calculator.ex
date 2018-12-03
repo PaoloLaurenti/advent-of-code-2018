@@ -1,5 +1,5 @@
 defmodule Day1.FrequencyCalculator do
-  @spec calculate(values :: [String.t()]) :: integer()
+  @spec calculate(values :: Enumerable.t()) :: integer()
   def calculate(values) do
     values
     |> Enum.map(&toNumber/1)
