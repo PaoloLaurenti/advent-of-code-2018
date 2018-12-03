@@ -21,4 +21,11 @@ defmodule FrequencyCalculatorTest do
       assert FrequencyCalculator.calculate(input) == 35
     end
   end
+
+  describe "input with N elements" do
+    test "returns the algebric sums depending of input elements sign" do
+      input = ["+42", "-7", "+4", "-51"]
+      assert FrequencyCalculator.calculate(input) == -12
+    end
+  end
 end
