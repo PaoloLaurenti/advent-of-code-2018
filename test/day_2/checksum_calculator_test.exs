@@ -31,14 +31,19 @@ defmodule ChecksumyCalculatorTest do
       assert ChecksumCalculator.calculate(input) == 0
     end
 
-    test "with only one that has a letter appearing twice" do
+    test "with only one that has a letter appearing twice returns zero as checksum" do
       input = ["abbcdef", "gsrvhad"]
       assert ChecksumCalculator.calculate(input) == 0
     end
 
-    test "with only one that has a letter appearing three times" do
+    test "with only one that has a letter appearing three times returns zero as checksum" do
       input = ["abcdef", "gsrrvrad"]
       assert ChecksumCalculator.calculate(input) == 0
+    end
+
+    test "with one having a letter appearing twice and the other one having a letter apperaing three times, returns one as checksum" do
+      input = ["abbcdef", "gsrrvrad"]
+      assert ChecksumCalculator.calculate(input) == 1
     end
   end
 end
