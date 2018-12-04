@@ -27,12 +27,17 @@ defmodule ChecksumyCalculatorTest do
 
   describe "input with two elements" do
     test "whith different letters returns zero as checksum" do
-      input = ["abcdef", "gsrvrad"]
+      input = ["abcdef", "gsrvhad"]
       assert ChecksumCalculator.calculate(input) == 0
     end
 
     test "with only one that has a letter appearing twice" do
-      input = ["abbcdef", "gsrvrad"]
+      input = ["abbcdef", "gsrvhad"]
+      assert ChecksumCalculator.calculate(input) == 0
+    end
+
+    test "with only one that has a letter appearing three times" do
+      input = ["abcdef", "gsrrvrad"]
       assert ChecksumCalculator.calculate(input) == 0
     end
   end
