@@ -13,5 +13,10 @@ defmodule ChecksumyCalculatorTest do
       input = ["abbcdef"]
       assert ChecksumCalculator.calculate(input) == 0
     end
+
+    test "with only one letter appearing three times returns zero as checksum" do
+      input = ["abbbcdef"]
+      assert ChecksumCalculator.calculate(input) == 0
+    end
   end
 end
