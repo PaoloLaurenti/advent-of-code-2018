@@ -46,14 +46,14 @@ defmodule ChecksumyCalculatorTest do
       assert ChecksumCalculator.calculate(input) == 1
     end
 
-    test "with one having two letters appearing twice and the other one having a letter apperaing three times, returns two as checksum" do
+    test "with one having two letters appearing twice and the other one having a letter apperaing three times, returns one as checksum" do
       input = ["ebbcdef", "gsrrvrad"]
-      assert ChecksumCalculator.calculate(input) == 2
+      assert ChecksumCalculator.calculate(input) == 1
     end
 
-    test "with one having two letters appearing twice and the other one having three letters apperaing three times, returns six as checksum" do
+    test "with one having two letters appearing twice and the other one having three letters apperaing three times, returns one as checksum" do
       input = ["ebbcdef", "gsrrvradgajayg"]
-      assert ChecksumCalculator.calculate(input) == 6
+      assert ChecksumCalculator.calculate(input) == 1
     end
   end
 
@@ -65,7 +65,7 @@ defmodule ChecksumyCalculatorTest do
 
     test "calculate checksum" do
       input = ["abbnccccdeef", "qwerty", "assdfghj", "mmmnbvcmxb"]
-      assert ChecksumCalculator.calculate(input) == 8
+      assert ChecksumCalculator.calculate(input) == 6
     end
   end
 end
