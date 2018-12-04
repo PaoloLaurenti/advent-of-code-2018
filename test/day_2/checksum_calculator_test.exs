@@ -24,4 +24,11 @@ defmodule ChecksumyCalculatorTest do
       assert ChecksumCalculator.calculate(input) == 0
     end
   end
+
+  describe "input with two elements" do
+    test "whith different letters returns zero as checksum" do
+      input = ["abcdef", "gsrvrad"]
+      assert ChecksumCalculator.calculate(input) == 0
+    end
+  end
 end
