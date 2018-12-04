@@ -45,5 +45,10 @@ defmodule ChecksumyCalculatorTest do
       input = ["abbcdef", "gsrrvrad"]
       assert ChecksumCalculator.calculate(input) == 1
     end
+
+    test "with one having two letters appearing twice and the other one having a letter apperaing three times, returns one as checksum" do
+      input = ["ebbcdef", "gsrrvrad"]
+      assert ChecksumCalculator.calculate(input) == 2
+    end
   end
 end
