@@ -56,4 +56,16 @@ defmodule ChecksumyCalculatorTest do
       assert ChecksumCalculator.calculate(input) == 6
     end
   end
+
+  describe "input with N elements" do
+    test "all with different letters returns zero" do
+      input = ["abncdef", "qwerty", "asdfghj", "mnbvcx"]
+      assert ChecksumCalculator.calculate(input) == 0
+    end
+
+    test "calculate checksum" do
+      input = ["abbnccccdeef", "qwerty", "assdfghj", "mmmnbvcmxb"]
+      assert ChecksumCalculator.calculate(input) == 8
+    end
+  end
 end
