@@ -10,4 +10,13 @@ defmodule Day1.Solution do
     IO.puts("The result is " <> to_string(res))
     :ok
   end
+
+  def run2(input_path) do
+    res =
+      File.stream!(input_path)
+      |> FrequencyCalculator.look_for_frequency_reached_twice()
+
+    IO.puts("The result is " <> to_string(res))
+    :ok
+  end
 end
