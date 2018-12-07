@@ -1,4 +1,4 @@
-defmodule ChecksumyCalculatorTest do
+defmodule ChecksumCalculatorTest do
   use ExUnit.Case
 
   alias Day2.ChecksumCalculator
